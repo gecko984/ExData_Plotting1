@@ -45,7 +45,7 @@ par(mfrow = c(2, 2))
 plot(d$datetime, d$Global_active_power, type="n", xlab="", ylab="Global Active Power")
 lines(d$datetime, d$Global_active_power)
 
-plot(d$datetime, d$Voltage, pch=NA_integer_, ylab="Voltage", xlab="datetime")
+plot(d$datetime, d$Voltage, type="n", ylab="Voltage", xlab="datetime")
 lines(d$datetime, d$Voltage)
 
 plot(d$datetime, d$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
@@ -56,8 +56,8 @@ legend("topright", col = c("black", "red", "blue"),
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        lty=c(1,1,1), bty="n")
 
-plot(d$datetime, d$Global_reactive_power, pch=NA_integer_, ylab="Global_Reactive_Power", xlab="datetime")
-lines(d$datetime, d$Global_active_power, type="o")
+plot(d$datetime, d$Global_reactive_power, type="l", ylab="Global_Reactive_Power", xlab="datetime", lwd=1)
+#lines(d$datetime, d$Global_active_power)
 
 dev.off()
 
